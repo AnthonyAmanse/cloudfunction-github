@@ -37,7 +37,7 @@ $ bx wsk package bind /whisk.system/github myGit \
 * Create Trigger
 
 ```
-$ bx wsk trigger create issueTrigger --feed myGit/webhook --param events issue
+$ bx wsk trigger create issueTrigger --feed myGit/webhook --param events issues
 ```
 
 * Create Action
