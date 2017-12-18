@@ -20,6 +20,10 @@ $ export COLUMN_ID=YOUR_COLUMN_ID
 ```
 * IBM Cloud Function
 Get [Cloud Function CLI](https://console.bluemix.net/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli)
+* Slack Webhook
+```
+export SLACK_WEBHOOK=https://hooks.slack.com/services/AAA/BBB/CCC
+```
 
 
 
@@ -43,7 +47,7 @@ $ bx wsk trigger create issueTrigger --feed myGit/webhook --param events issues
 * Create Action
 
 ```
-$ bx wsk action create updateIssue updateIssue.js --param gitUsername AnthonyAmanse --param gitPersonalToken $GIT_TOKEN --param columnId $COLUMN_ID
+$ bx wsk action create updateIssue updateIssue.js --param gitUsername AnthonyAmanse --param gitPersonalToken $GIT_TOKEN --param columnId $COLUMN_ID --param slackWebhook $SLACK_WEBHOOK
 ```
 
 * Create Rule
